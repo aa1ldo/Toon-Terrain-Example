@@ -19,6 +19,7 @@ Shader "Custom/ToonWater2"
 			Tags
 			{
 				"Queue" = "Transparent"
+				"LightMode" = "Vertex"
 			}
 
 			// Grab the screen behind the object into _BackgroundTexture
@@ -35,6 +36,7 @@ Shader "Custom/ToonWater2"
 				#pragma vertex vert
 				#pragma fragment frag
 				#include "UnityCG.cginc"
+				
 
 				// Properties
 				sampler2D _BackgroundTexture;
@@ -90,6 +92,7 @@ Shader "Custom/ToonWater2"
 
 				CGPROGRAM
 				#include "UnityCG.cginc"
+					#include "Lighting.cginc"
 
 				#pragma vertex vert
 				#pragma fragment frag
@@ -153,7 +156,7 @@ Shader "Custom/ToonWater2"
 						// sample main texture
 						float4 albedo = tex2D(_MainTex, input.texCoord.xy);
 
-						float4 col = _Color * foamRamp * albedo;
+						float4 col = (_Color * _LightColor0) * foamRamp * albedo;
 						return col;
 					}
 
