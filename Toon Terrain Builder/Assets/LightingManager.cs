@@ -18,7 +18,7 @@ public class LightingManager : MonoBehaviour
         if (Application.isPlaying)
         {
             //(Replace with a reference to the game time)
-            TimeOfDay += (Time.deltaTime * 0.1f);
+            TimeOfDay += (Time.deltaTime / 60);
             TimeOfDay %= 24; //Modulus to ensure always between 0-24
             UpdateLighting(TimeOfDay / 24f);
         }

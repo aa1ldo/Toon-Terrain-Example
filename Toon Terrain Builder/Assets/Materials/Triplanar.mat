@@ -84,7 +84,7 @@ Material:
     - _Parallax: 0.02
     - _RimPower: 12.55
     - _Scale: -0.04
-    - _SideScale: 0.15
+    - _SideScale: 0.09
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

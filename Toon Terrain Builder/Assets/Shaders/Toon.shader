@@ -71,7 +71,7 @@ Shader "Toon"
 
 					float4 sample = tex2D(_MainTex, i.uv);
 
-					return _Color * sample * (_AmbientColor + light);
+					return _Color * _LightColor0 * sample * (_AmbientColor + light);
 				}
 				ENDCG
 			}

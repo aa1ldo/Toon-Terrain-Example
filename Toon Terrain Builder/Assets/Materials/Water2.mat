@@ -67,7 +67,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DepthFactor: 0.9
+    - _DepthFactor: 1.2
     - _DetailNormalMapScale: 1
     - _DistortStrength: 1
     - _DstBlend: 0
@@ -83,7 +83,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveAmp: 1.31
+    - _WaveAmp: 1.7
     - _WaveSpeed: 95.8
     - _ZWrite: 1
     m_Colors:
